@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+html {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    /* background-image: linear-gradient(rgb(184, 184, 184), rgb(114, 114, 114)); */
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: black;
+    border: none;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FA5B0F;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.menu-container {
+    flex: 1 1 10%;
+}
+
+.main-header {
+    height: 12%;
+    border-bottom-width: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    width: 100%;
+    background: #fff;
+    border-bottom: 15px solid #FC0;
+}
+
+#show {
+    display: none;
+}
+
+#show a {
+    color: white;
+}
+
+.HeaderPanel {
+    display: flex;
+    /* max-width: 100vh; */
+}
+
+.HeaderPanel {
+    width: 100%;
+    flex: 1 100%;
+    order: 5;
+    padding: 0 .625rem !important;
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* z-index: 2; */
+    background: #3F3F3F;
+    background-size: contain;
+    align-items: flex-start;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .4);
+}
+
+.fullscreenNav {
+    padding-top: 3rem;
+    display: flex;
+    margin: 0 auto;
+    padding: 6rem .625rem 5rem;
+    max-width: 75rem;
+    width: 100%;
+}
+
+.fullscreenNavList {
+    display: flex;
+    margin: 0 auto;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.fullscreenNavList li {
+    flex: 1 50%;
+}
+
+.fullscreennav-listitem {
+    padding: 0 1rem 1rem;
+    flex-grow: 1;
+    flex-basis: 45%;
+    box-sizing: border-box;
+}
+
+.navTitle {
+    padding-bottom: .3rem;
+    border-bottom: 1px solid #848484;
+    padding-top: 62px;
+    position: relative;
+    overflow: hidden;
+}
+
+.navTitle a {
+    font-size: 1.625rem;
+    line-height: 1;
+    font-weight: 700;
+    display: block;
+}
+
+#navTitleHowTo:after {
+    background-image: url(IMG/Nav/fullscreen-nav-howto.png);
+}
+
+.navTitle:after {
+    content: ' ';
+    display: block;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    height: 95px;
+    width: 120px;
+}
+
+.fullscreennavsub {
+    font-size: 1rem;
+    line-height: 1em;
+    font-weight: 700;
+}
+
+.fullscreennavsub a {
+    padding: .6rem 0;
+    display: inline-block;
+}
+
+.fullscreennavsub a:hover {
+    color: #FC0 !important
+}
+
+#navTitleFix:after {
+    background-image: url(IMG/Nav/fullscreen-nav-fix.png);
+}
+
+#navTitleBuy:after {
+    background-image: url(IMG/Nav/fullscreen-nav-buy.png);
+}
+
+#navTitleDoMore::after {
+    background-image: url(IMG/Nav/fullscreen-nav-domore.png);
+}
+
+.menu-button {
+    outline: 0;
+    letter-spacing: 1px;
+    border: 0;
+    padding: 0;
+    z-index: 8;
+    position: relative;
+    background: white;
+}
+
+.logo-icon {
+    /* width: 200px; */
+    height: 100px;
+    top: 22px;
+    position: relative;
+}
+
+header>.search-bar {
+    flex: 1 1 10%;
+    min-height: 1.2em;
+    padding-left: 8%;
+}
+
+.searchButton {
+    display: none;
+}
+
+.search-bar form {
+    float: right;
+    width: 80%
+}
+
+.input-group {
+    display: flex;
+    font-size: 1rem;
+}
+
+.input-group input {
+    outline: 0;
+    border: 1px solid #D8D8D8;
+    border-right-color: rgb(216, 216, 216);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right: none;
+    padding: 0 10px;
+    margin: 0;
+    height: 40px;
+    width: 70%;
+    border-radius: 3px 0 0 3px;
+}
+
+.input-group button {
+    padding: 0 1em;
+    color: #fff;
+    background: #00BAFF;
+    border: none;
+    font-size: 1rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    display: inline-block;
+    line-height: 1;
+}
+
+.Category-logo {
+    display: flex;
+    margin: 0 10%;
+    justify-content: space-around;
+}
+
+h2 {
+    display: block;
+    font-size: 1.125rem;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+
+.main-nav {
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin: 0 10%;
+}
+
+.mainNav {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.mainNav h2 {
+    text-align: center;
+}
+
+a {
+    color: rgb(16, 16, 16);
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.article {
+    height: 90px;
+    width: 260px;
+    background-color: #fff;
+    margin-left: auto;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.747);
+}
+
+.article:first-child {
+    border-bottom: #fff;
+}
+
+.article a {
+    text-align: center;
+}
+
+.imginnav {
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.comp_image {
+    width: 100%;
+    max-width: 235px;
+}
+
+.social-box {
+    background: #FC0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.signup {
+    display: flex;
+    background: rgb(255, 204, 0);
+    margin: 0 50px;
+    padding: 1rem;
+    width: 100%;
+}
+
+.mailinput {
+    align-items: center;
+    font-size: 1.125rem;
+    line-height: 1.3rem;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0.625rem;
+    flex-basis: 60%;
+}
+
+.signupform {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.social_logo {
+    flex: 1 20%;
+    width: 100%;
+}
+
+.facebook_follow {
+    font-size: 20px;
+    font-weight: bold;
+    flex: 1;
+    margin-top: -3%;
+    flex: 1 20%;
+}
+
+.facebook_follow {}
+
+.signupform button {
+    text-transform: uppercase;
+    background: rgb(250, 91, 15);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-color: rgb(250, 91, 15);
+}
+
+.EditHeading {
+    color: rgb(16, 16, 16);
+    -webkit-box-flex: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    flex: 1 0 100%;
+    width: 100%;
+}
+
+.EditHeading span {
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: rgb(255, 204, 0) 0px -7px 0px inset;
+}
+
+.editorial {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.mainedit {
+    display: flex;
+}
+
+.InsideMainEdit {
+    flex: 1;
+    flex-basis: 50%;
+}
+
+.InsideMainEdit>* {
+    margin: 0 20%;
+}
+
+.insideMainEdit {
+    width: 50%;
+    order: 2;
+    padding: 0.7rem 1rem 2.5rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.insideMainEdit h1 span {
+    box-shadow: none;
+    font-size: 2.25rem;
+    line-height: 1.1em;
+}
+
+.insideMainEdit {
+    margin: 0 10% 0 0;
+}
+
+.article-list {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    margin: 1% 6%;
+    flex-wrap: wrap;
+}
+
+.alchilditem {
+    flex: 1 30%;
+    margin: 2%;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.footer>* {
+    padding: 0 60px;
+}
+
+.footer_nav {
+    background-color: #3F3F3F;
+}
+
+.footerlogo {
+    margin: 4% 2% 1% 2%;
+}
+
+.footerlogo img {
+    width: 12%;
+}
+
+.innerfooter {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 30px;
+}
+
+.input {
+    display: flex;
+    height: 60%;
+    padding: 10px 0;
+    flex: 1 100%;
+}
+
+.input input {
+    width: 100%;
+    font-size: 16px;
+}
+
+.input button {
+    color: white;
+    background: rgb(208, 62, 5);
+    border: none;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    width: 25%;
+    font-size: 16px;
+}
+
+.innerfooter a {
+    color: white;
+}
+
+.innerfooter a:hover {
+    color: #FC0;
+}
+
+.insideinner1 {
+    flex-flow: column;
+    flex: 1 40%;
+}
+
+.social>* {
+    display: block;
+    padding: 1%;
+    margin: 0 0 0 0;
+}
+
+.insideinner2 {
+    flex-flow: column;
+    flex: 1 10%;
+}
+
+.insideinner2 li {
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+.insideinner3 {
+    flex-flow: row wrap;
+    flex: 1 40%;
+}
+
+.insideinner3 ul {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.insideinner3 li {
+    list-style: none;
+    flex-wrap: wrap;
+    width: 40%;
+    margin-left: 10px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.insideinner3 a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer_info {
+    display: flex;
+    flex-wrap: wrap;
+    height: 30px;
+}
+
+.footer_info>* {
+    border: 1px solid black
+}
+
+@media screen and (min-width: 320px) and (max-width: 800px) and (-webkit-min-device-pixel-ratio: 1) {
+    body>* {
+        width: 100%;
+    }
+    /* header */
+    .main-header {
+        padding: 0;
+    }
+    .search-bar form {
+        display: none;
+    }
+    .menu-button {
+        padding: 15%;
+    }
+    .input-group {
+        display: none;
+    }
+    .searchButton {
+        display: contents;
+        padding: 40px;
+    }
+    .searchButton button {
+        background: none;
+        border: none;
+    }
+    header>.search-bar {
+        flex: 1 2%;
+    }
+    .searchButton button img {
+        margin-left: 40px;
+        width: 40px;
+        height: 40px;
+    }
+    .logo-icon {
+        width: 170px;
+        height: 65px;
+        top: 22px;
+        position: relative
+    }
+    /* main */
+    main {
+        width: 100%;
+        height: 100%;
+    }
+    .Category-logo {
+        width: 90%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .Infirst {
+        width: 50%;
+    }
+    .Infirst a img {
+        width: 100%;
+        flex: 1 50%;
+    }
+    .social-box>* {
+        display: flex;
+        flex-flow: column;
+        margin: 0;
+    }
+    .mainedit {
+        flex-flow: column;
+        display: flex;
+    }
+    .InsideMainEdit>* {
+        margin: 0 5%;
+        width: 90%;
+    }
+    .insideMainEdit {
+        width: 100%;
+    }
+    .article-list {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .article-list a {
+        width: 100%;
+        flex: 0;
+        margin: 5% 0;
+        font-weight: 900;
+        font-size: 18px;
+        padding-bottom: 5%;
+    }
+    .footer>* {
+        padding: 0;
+        font-weight: 500;
+    }
+    .footer>* {
+        padding: 20px 20px;
+    }
+    .footer_nav {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .footerlogo {
+        justify-content: center;
+        display: flex;
+    }
+    .footerlogo img {
+        width: 40%;
+        height: 0%;
+    }
+    .innerfooter {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 10px 10px;
+    }
+    .input {
+        display: flex;
+        flex-flow: row wrap;
+        height: 65px;
+    }
+    .input input {
+        width: 70%;
+    }
+    .input button {
+        color: white;
+        background: rgb(225, 75, 5);
+        border: none;
+        border-top-right-radius: 10%;
+        border-bottom-right-radius: 10%;
+        width: 30%;
+        font-size: 16px;
+    }
+    .insideinner2>ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding-left: 0px;
+    }
+    .insideinner2 {
+        border-top: 1px solid grey;
+    }
+    .insideinner2 li {
+        list-style: none;
+        padding-bottom: 20px;
+        flex: 1 50%;
+    }
+    .insideinner3 ul {
+        padding-left: 0px;
+    }
+    .fullscreenNavList {
+        flex-flow: column nowrap;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1080px) and (-webkit-min-device-pixel-ratio: 1) {
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    .main-header {
+        height: 5%;
+    }
+    .InsideMainEdit>* {
+        margin: 0;
+    }
+}
