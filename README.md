@@ -5,6 +5,7 @@ Preview of Home Page: <br>
 https://harshisharma.github.io/Lifewire_Template/HomePage.html
 <br>
 Preview of HowTo Category Page:
+<br>
 https://harshisharma.github.io/Lifewire_Template/Category_Page.html 
 <br>
 Preview of Article Page: <br>
